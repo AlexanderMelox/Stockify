@@ -1,0 +1,61 @@
+.stock {
+}
+
+.stock__title {
+  font-size: 4rem;
+  color: $color-gray-04;
+}
+
+.stock__price {
+  font-size: 2rem;
+  color: $color-gray-04;
+  font-weight: bold;
+}
+
+.stock .card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.stock .card__body {
+  padding-top: 3rem;
+}
+
+.stock__input-group {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius-small;
+  overflow: hidden;
+  font-size: 1.3rem;
+  box-shadow: $box-shadow-01;
+}
+
+.stock__input {
+  padding: 1rem 1rem;
+  flex: 1 0 50%;
+  border: 0;
+  font: inherit;
+  font-weight: bold;
+  background-color: $color-gray-02;
+  font-weight: bold;
+  color: $color-gray-01;
+}
+
+.stock__input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $color-gray-01;
+  opacity: 1; /* Firefox */
+}
+
+.stock__button {
+  flex: 1 1 auto;
+  outline: none;
+  border: none;
+  height: 3.9rem;
+  font: inherit;
+  @include background-gradient;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}

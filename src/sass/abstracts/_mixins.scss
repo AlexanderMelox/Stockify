@@ -3,3 +3,7 @@
   background-clip: text;
   color: transparent;
 }
+
+@mixin background-gradient {
+  background-image: linear-gradient(to right, $brand-02, $brand-01);
+}
