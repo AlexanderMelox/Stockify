@@ -1,0 +1,5 @@
+@mixin text-clip-gradient {
+  background-image: linear-gradient(to right, $brand-02, $brand-01);
+  background-clip: text;
+  color: transparent;
+}

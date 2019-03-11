@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <div class="container">
+    <div class="container pt-5">
       <div class="row">
         <div class="col-md-12">
           <router-view></router-view>
@@ -22,4 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./sass/main.scss";
 </style>
