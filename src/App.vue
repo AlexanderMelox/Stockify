@@ -12,15 +12,18 @@
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import Header from './components/Header.vue';
 
 export default {
   components: {
     Header
+  },
+  created() {
+    this.$store.dispatch('initStocks');
   }
 };
 </script>
 
 <style lang="scss">
-@import "./sass/main.scss";
+@import './sass/main.scss';
 </style>

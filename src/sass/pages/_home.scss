@@ -1,0 +1,23 @@
+.home {
+  background-image: linear-gradient(to bottom right, $purple-dark, $purple-light);
+  border-radius: $border-radius-small;
+  box-shadow: $box-shadow-01;
+  padding: 3rem;
+  color: #fff;
+}
+
+.home__title {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.home__subtitle {
+  font-size: 1.3rem;
+  color: rgba($color: #fff, $alpha: 0.7);
+}
+
+.home__funds {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
