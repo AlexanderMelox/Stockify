@@ -8,13 +8,18 @@
       <div class="card__body">
         <form>
           <div class="stock__input-group">
-            <input type="number" class="stock__input" placeholder="Quantity" v-model="quantity">
+            <input
+              type="number"
+              :class="['stock__input', {'danger': insufficientQuantity}]"
+              placeholder="Quantity"
+              v-model="quantity"
+            >
             <input
               type="submit"
               class="stock__button"
-              value="Sell"
+              :value="insufficientQuantity ? 'Not enough' : 'Sell'"
               @click.prevent="sellStock"
-              :disabled="Number(quantity) <= 0 || !Number.isInteger(Number(quantity))"
+              :disabled="insufficientQuantity || Number(quantity) <= 0 || !Number.isInteger(Number(quantity))"
             >
           </div>
         </form>
@@ -25,6 +30,7 @@
 
 <script>
 import { mapActions } from 'vuex';
+import { constants } from 'fs';
 
 export default {
   props: {
@@ -37,6 +43,11 @@ export default {
     return {
       quantity: 0
     };
+  },
+  computed: {
+    insufficientQuantity() {
+      return this.quantity > this.stock.quantity;
+    }
   },
   methods: {
     ...mapActions({

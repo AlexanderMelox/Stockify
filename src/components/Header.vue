@@ -9,6 +9,9 @@
         <a class="nav__links">Stocks</a>
       </router-link>
     </nav>
+    <div class="nav__funds">
+      <strong>Funds: ${{ funds | numberWithCommas }}</strong>
+    </div>
     <nav class="nav nav--right">
       <li class="nav__list-item">
         <a class="nav__links" href="#">End Day</a>
@@ -36,11 +39,16 @@
 </template>
 
 <script>
-import Logo from "./shared/Logo.vue";
+import Logo from './shared/Logo.vue';
 
 export default {
   components: {
     Logo
+  },
+  computed: {
+    funds() {
+      return this.$store.getters.funds;
+    }
   }
 };
 </script>

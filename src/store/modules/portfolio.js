@@ -9,6 +9,10 @@ const mutations = {
   BUY_STOCK(state, { stockId, quantity, stockPrice }) {
     // Find if the stock record exists
     const record = findStock(state, stockId);
+
+    // Changes quantity from string to number
+    quantity = parseInt(quantity);
+
     // Checks if it does exist
     if (record) {
       // Adds the stock quantity to the existing quantity
