@@ -13,9 +13,8 @@ const router = new VueRouter({
 });
 
 // Filters
-Vue.filter('numberWithCommas', function(value) {
-  if (!value) return '';
-  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+Vue.filter('currency', function(value) {
+  return '$' + value.toLocaleString();
 });
 
 new Vue({

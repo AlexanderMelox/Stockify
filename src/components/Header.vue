@@ -10,7 +10,7 @@
       </router-link>
     </nav>
     <div class="nav__funds">
-      <strong>Funds: ${{ funds | numberWithCommas }}</strong>
+      <strong>Funds: {{ funds | currency }}</strong>
     </div>
     <nav class="nav nav--right">
       <li class="nav__list-item">
