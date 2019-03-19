@@ -41,7 +41,7 @@ export default {
   },
   data() {
     return {
-      quantity: 0
+      quantity: ''
     };
   },
   computed: {
@@ -60,7 +60,7 @@ export default {
         quantity: this.quantity
       };
       this.placeSellOrder(order);
-      this.quantity = 0;
+      this.quantity = '';
     }
   }
 };
