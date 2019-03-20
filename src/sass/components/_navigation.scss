@@ -12,10 +12,20 @@
 
 .nav__list-item {
   list-style: none;
+  position: relative;
 }
 
 .nav__dropdown-icon {
   fill: currentColor;
+}
+
+.nav__dropdown-icon {
+  fill: currentColor;
+  transition: all 0.2s;
+}
+
+.nav__dropdown-icon.flipped {
+  transform: rotate(540deg);
 }
 
 .nav__links:link,
@@ -25,6 +35,7 @@
   display: block;
   text-decoration: none;
   padding: 1rem 2rem;
+  background-color: #fff;
   transition: all 0.2s;
 }
 
@@ -44,6 +55,21 @@
 
 .nav__dropdown-menu {
   display: none;
+  list-style: none;
+}
+
+.nav__dropdown-menu.is-open {
+  position: absolute;
+  min-width: 150px;
+  display: block;
+  top: 6.2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation: slide-in 0.2s;
+}
+
+.nav__dropdown-menu .nav__links:hover {
+  background-color: $color-gray-02;
 }
 
 .nav__funds {

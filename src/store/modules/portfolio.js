@@ -40,6 +40,10 @@ const mutations = {
     }
     // Adds the funds for selling the stock.
     state.funds += stockPrice * quantity;
+  },
+  SET_PORTFOLIO(state, newPortfolio) {
+    state.funds = newPortfolio.funds;
+    state.stocks = newPortfolio.stockPortfolio ? newPortfolio.stockPortfolio : [];
   }
 };
 
